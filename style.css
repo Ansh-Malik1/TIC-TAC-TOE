@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#wrapper{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding:2rem 0;
+    gap: clamp(1rem,3rem,4rem);
+    background-color: black;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    border:2px solid pink;
+    box-shadow: 0 0 15px 10px plum;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    max-width: 20rem;
+    padding:2rem;
+    margin:auto;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    font-weight: bolder;
+    opacity: 0.85;
+}
+
+.left{
+    border-right: 2px solid plum;
+}
+
+.right{
+    border-left: 2px solid plum;
+}
+
+.mid{
+    border-top: 2px solid plum;
+    border-bottom: 2px solid plum;
+}
+
+.newGame{
+    background-color: white;
+    color:rgb(198, 74, 159);
+    background-color: white;
+    box-shadow: 0 0 15px 5px plum;
+    text-shadow: plum;
+    padding:1rem 2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    display: none;
+}
+.newGame>h4{
+    font-weight: bold;
+}
+
+.infoDiv{
+    color:pink;
+    background-color: white;
+    box-shadow: 0 0 15px 5px plum;
+    text-shadow: plum;
+    padding:1rem 2rem;
+    border-radius: 20px;
+}
+
+.active{
+    display: block;
+}
+
+.greenBg{
+    background-color: rgba(108, 191, 66, 0.874);
+}
